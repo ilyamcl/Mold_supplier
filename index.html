@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Понятный интерактивный учебник для поставщика пресс-форм: пластмассы, MIM, вопросы клиенту, DFM и проверка знаний.">
+  <title>Пресс-формы без сложных слов — учебник поставщика</title>
+  <style>
+    :root{--ink:#17342e;--muted:#566b65;--paper:#f5f7f2;--surface:#fff;--line:#dce5dc;--green:#16715c;--green-dark:#105543;--mint:#e2f2e9;--gold:#f6edcf;--gold-ink:#705719;--blue:#e6f0f7;--red:#f8e7e2;--shadow:0 12px 34px rgba(24,55,44,.08);--radius:18px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--green-dark);text-underline-offset:3px}a:hover{color:#0a4435}button,input{font:inherit}button{cursor:pointer}h1,h2,h3{line-height:1.2;letter-spacing:-.025em}h1{font-size:clamp(2.2rem,5vw,3.65rem);margin:.2em 0 .35em}h2{font-size:clamp(1.7rem,3vw,2.35rem);margin:0 0 18px}h3{font-size:1.24rem;margin:0 0 10px}p{margin:.55em 0 1em}ul,ol{padding-left:1.35em}li{padding-left:.2em;margin:.35em 0}.muted{color:var(--muted)}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;font-weight:750;color:var(--green)}.small{font-size:.9rem}.shell{max-width:1200px;margin:0 auto;padding:24px}.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#123f35,#176953 70%,#2b8367);color:#fff;border-radius:28px;padding:clamp(26px,5vw,58px);box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:330px;height:330px;border:1px solid #ffffff26;border-radius:50%;right:-95px;top:-170px;box-shadow:0 0 0 38px #ffffff0c,0 0 0 78px #ffffff08}.hero .eyebrow{color:#b8e6cb}.hero p{max-width:760px;color:#e2f1e9;font-size:1.1rem}.hero .note{position:relative;z-index:1;max-width:740px;border-left:3px solid #dbce82;padding:10px 0 10px 16px;margin-top:24px;color:#f7f2d9}.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.tag{border:1px solid #ffffff5a;color:#fff;border-radius:999px;padding:5px 11px;font-size:.83rem}.layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:30px;margin-top:30px;align-items:start}.sidebar{position:sticky;top:18px;background:var(--surface);padding:18px;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.sidebar strong{display:block;margin:0 0 8px}.sidebar a{display:block;padding:6px 9px;margin:1px 0;border-radius:9px;text-decoration:none;color:var(--muted);font-size:.93rem}.sidebar a:hover,.sidebar a:focus{background:var(--mint);color:var(--green-dark)}.sidebar .subnav{padding-left:12px;border-left:1px solid var(--line);margin:3px 0 8px 8px}.sidebar .subnav a{font-size:.86rem;padding:3px 8px}.content{min-width:0}.section{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,4vw,38px);margin:0 0 22px;box-shadow:var(--shadow);scroll-margin-top:16px}.section-kicker{font-size:.79rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);font-weight:750;margin-bottom:7px}.lead{font-size:1.08rem;color:#354f47;max-width:820px}.grid-2,.grid-3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:18px 0}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.tile{padding:18px;border-radius:14px;background:#f2f6f0;border:1px solid var(--line)}.tile h3{font-size:1.06rem}.tile p:last-child,.tile ul:last-child{margin-bottom:0}.tile.mim{background:#f4efff;border-color:#e3d9f5}.tile.plastic{background:#eaf5ed}.callout{padding:16px 18px;margin:18px 0;border-radius:12px;background:var(--gold);border-left:4px solid #c4a740;color:#493b17}.callout.info{background:var(--blue);border-color:#6c99b2;color:#214151}.callout.good{background:var(--mint);border-color:var(--green);color:#173f33}.callout.alert{background:var(--red);border-color:#ba654d;color:#5d2f23}.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:18px 0}.flow-step{background:#f2f6f0;border:1px solid var(--line);border-radius:13px;padding:13px 12px;min-height:112px}.flow-step b{display:block;color:var(--green-dark);font-size:.84rem;margin-bottom:5px}.flow-step span{font-size:.9rem;line-height:1.4;display:block}.diagram{overflow:hidden;border-radius:14px;background:#f4f7f5;border:1px solid var(--line);padding:8px;margin:18px 0}.diagram svg{display:block;width:100%;height:auto}.diagram-note{font-size:.85rem;color:var(--muted);padding:2px 8px 8px}.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.86rem;color:var(--muted);padding:0 8px 8px}.legend span:before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;background:#88c5a8;margin-right:6px}.legend span:nth-child(2):before{background:#d9aa61}.legend span:nth-child(3):before{background:#8eb2c5}.term-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.term{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fff}.term summary{cursor:pointer;font-weight:700;color:var(--green-dark)}.term p{margin:.7em 0 .1em;color:var(--muted)}.checklist{padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.checklist li{background:#f4f7f2;border-radius:10px;padding:10px 12px;margin:0}.checklist input{accent-color:var(--green);margin-right:8px;transform:scale(1.1)}.table-wrap{overflow:auto;margin:15px 0}.table-wrap table{border-collapse:collapse;width:100%;min-width:560px;font-size:.94rem}.table-wrap th,.table-wrap td{text-align:left;vertical-align:top;padding:11px;border-bottom:1px solid var(--line)}.table-wrap th{background:#f0f5f0;color:#29483d}.question-list{counter-reset:q;list-style:none;padding:0}.question-list li{counter-increment:q;margin:0;padding:13px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:32px 1fr;gap:10px}.question-list li:before{content:counter(q,decimal-leading-zero);font-weight:800;color:var(--green);font-size:.86rem}.question-list p{margin:0}.why{font-size:.88rem;color:var(--muted);margin-top:4px}.copy-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:15px 0}.btn{border:0;border-radius:10px;padding:10px 15px;background:var(--green);color:white;font-weight:700}.btn:hover{background:var(--green-dark)}.btn.secondary{background:#edf3ee;color:var(--green-dark);border:1px solid var(--line)}.btn.secondary:hover{background:var(--mint)}.quiz-item{border:1px solid var(--line);border-radius:13px;padding:16px;margin:12px 0;background:#fff}.quiz-item legend{font-weight:700;padding:0 5px}.quiz-option{display:flex;gap:9px;align-items:flex-start;padding:6px 5px;border-radius:8px}.quiz-option:hover{background:#f4f7f2}.quiz-option input{margin-top:6px;accent-color:var(--green);flex:0 0 auto}.feedback{display:none;margin-top:10px;padding:10px 12px;border-radius:9px;font-size:.92rem}.feedback.correct{display:block;background:var(--mint);color:#174432}.feedback.incorrect{display:block;background:var(--red);color:#5d3025}.quiz-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}.score{font-weight:800;color:var(--green-dark)}.scenario-options{display:grid;gap:9px;margin:16px 0}.scenario-options button{text-align:left;border:1px solid var(--line);border-radius:11px;background:#fff;padding:13px 15px;color:var(--ink)}.scenario-options button:hover,.scenario-options button:focus{border-color:var(--green);background:#f1f8f3}.scenario-feedback{min-height:30px;margin-top:12px}.answer-key{padding:0 0 0 22px}.answer-key li{padding:2px 0}.sources li{overflow-wrap:anywhere}.foot{padding:15px 6px 40px;color:var(--muted);font-size:.88rem}.toplink{display:inline-block;margin-top:12px;font-size:.9rem}.progress-wrap{display:flex;align-items:center;gap:10px;margin:14px 0 4px;color:var(--muted);font-size:.85rem}.progress-track{height:8px;flex:1;max-width:280px;border-radius:99px;background:#dfe8df;overflow:hidden}.progress-bar{width:0;height:100%;background:var(--green);transition:width .2s ease}.screen-reader{position:absolute;left:-9999px}
+    @media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:relative;top:auto;display:flex;gap:7px;overflow:auto;white-space:nowrap;padding:10px}.sidebar strong,.sidebar .subnav{display:none}.sidebar a{display:inline-block;margin:0}.flow{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.shell{padding:12px}.hero{border-radius:20px;padding:25px 21px}.section{padding:22px 18px;margin-bottom:14px}.grid-2,.grid-3,.term-grid,.checklist{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.flow-step{min-height:0}.flow-step:last-child{grid-column:1/-1}.sidebar{margin-top:13px}.quiz-item{padding:13px}.table-wrap table{min-width:510px}}
+    @media print{body{background:#fff;font-size:11pt}.shell{max-width:none;padding:0}.hero{box-shadow:none;border-radius:0;padding:24px;color:#17342e;background:#fff;border-bottom:2px solid #16715c}.hero p,.hero .note{color:#17342e}.hero:after,.sidebar,.progress-wrap,.btn,.scenario-options{display:none!important}.layout{display:block;margin:0}.section{box-shadow:none;border:0;border-bottom:1px solid #bbb;padding:18px 0;break-inside:avoid}.section h2{font-size:20pt}.term-grid,.grid-2,.grid-3{break-inside:avoid}a{color:#17342e;text-decoration:none}.foot{padding:20px 0}.quiz-item{break-inside:avoid}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero" id="top">
+      <div class="eyebrow">Практический курс для поставщика оснастки</div>
+      <h1>Пресс-формы<br>без сложных слов</h1>
+      <p>Учебник для тех, кто принимает запрос клиента, собирает исходные данные и помогает проекту дойти до готовой формы и утверждённой детали. Подходит для термопластов и MIM.</p>
+      <div class="hero-tags"><span class="tag">Начальный уровень</span><span class="tag">Около 25 минут</span><span class="tag">Сценарии и тест с ключами</span></div>
+      <div class="note"><b>Главная задача на старте:</b> не угадать конструкцию формы, а собрать достаточно точные требования, чтобы инженер мог проверить реализуемость, цену и срок.</div>
+    </header>
+
+    <div class="progress-wrap" aria-label="Прогресс чтения"><span>Просмотрено</span><div class="progress-track"><div class="progress-bar" id="reading-progress"></div></div><span id="progress-label">0%</span></div>
+
+    <div class="layout">
+      <nav class="sidebar" aria-label="Содержание учебника">
+        <strong>Содержание</strong>
+        <a href="#start">С чего начать</a>
+        <a href="#basics">1. Как работает форма</a>
+        <div class="subnav"><a href="#terms">Словарь деталей</a></div>
+        <a href="#brief">2. Читаем запрос</a>
+        <a href="#questions">3. Вопросы клиенту</a>
+        <a href="#dfm">4. Риски DFM</a>
+        <a href="#cost">5. Цена и комплектация</a>
+        <a href="#workflow">6. Этапы проекта</a>
+        <a href="#mim">7. Особенности MIM</a>
+        <a href="#practice">8. Тренировка</a>
+        <a href="#quiz">Итоговый тест</a>
+        <a href="#key">Ключ ответов</a>
+        <a href="#sources">Источники</a>
+      </nav>
+
+      <main class="content">
+        <section class="section" id="start">
+          <div class="section-kicker">Как пользоваться</div>
+          <h2>Сначала понять задачу, потом обсуждать форму</h2>
+          <p class="lead">Пресс-форма — это оснастка, которая задаёт форму детали при производстве. Ваша коммерческая роль — выяснить, <b>что производят, из чего, в каком количестве и по каким критериям принимают результат</b>, а затем передать это инженеру без потери смысла.</p>
+          <div class="grid-3">
+            <div class="tile"><h3>1. Соберите факты</h3><p>Чертёж, 3D-модель, материал, объём, требования к внешнему виду и производству.</p></div>
+            <div class="tile"><h3>2. Отметьте пробелы</h3><p>Неизвестное обозначьте как вопрос. Не превращайте предположение в обещание клиенту.</p></div>
+            <div class="tile"><h3>3. Подключите инженера</h3><p>Передайте исходные данные и попросите проверить конструкцию, пресс, технологию и риски.</p></div>
+          </div>
+          <div class="callout good"><b>Безопасная фраза:</b> «Получили запрос. Чтобы подтвердить концепцию, цену и срок, уточним несколько требований и передадим модель на инженерную проверку».</div>
+        </section>
+
+        <section class="section" id="basics">
+          <div class="section-kicker">1 · Основы</div>
+          <h2>Как работает пресс-форма</h2>
+          <p>Для пластмассовой детали форму закрывают, расплавленный материал заполняет полость, затем материал выдерживают под давлением и охлаждают. Когда деталь затвердела, форма открывается, и выталкиватели помогают её снять.</p>
+          <div class="flow" aria-label="Этапы литьевого цикла">
+            <div class="flow-step"><b>① Закрыть</b><span>Половины формы смыкаются и держат давление.</span></div>
+            <div class="flow-step"><b>② Заполнить</b><span>Расплав входит через канал и литник в полость детали.</span></div>
+            <div class="flow-step"><b>③ Уплотнить</b><span>Давление помогает компенсировать усадку материала при остывании.</span></div>
+            <div class="flow-step"><b>④ Охладить</b><span>Каналы с теплоносителем отводят тепло; деталь набирает жёсткость.</span></div>
+            <div class="flow-step"><b>⑤ Открыть и снять</b><span>Форма раскрывается, выталкиватели выводят деталь наружу.</span></div>
+          </div>
+          <div class="diagram">
+            <svg viewBox="0 0 900 360" role="img" aria-labelledby="mold-title mold-desc">
+              <title id="mold-title">Упрощённая схема пресс-формы</title><desc id="mold-desc">Фиксированная и подвижная половины образуют полость детали. Материал входит через литниковый канал, охлаждающие каналы отводят тепло, выталкиватели снимают деталь.</desc>
+              <rect x="35" y="52" width="315" height="238" rx="18" fill="#dfe9e2" stroke="#54766a" stroke-width="3"/>
+              <rect x="550" y="52" width="315" height="238" rx="18" fill="#dfe9e2" stroke="#54766a" stroke-width="3"/>
+              <text x="190" y="84" text-anchor="middle" font-size="18" font-weight="700" fill="#29483d">Неподвижная половина</text>
+              <text x="705" y="84" text-anchor="middle" font-size="18" font-weight="700" fill="#29483d">Подвижная половина</text>
+              <path d="M350 128 L400 128 L415 144 L415 198 L400 214 L350 214 Z" fill="#fff" stroke="#c78c3f" stroke-width="3"/>
+              <path d="M550 128 L500 128 L485 144 L485 198 L500 214 L550 214 Z" fill="#fff" stroke="#c78c3f" stroke-width="3"/>
+              <rect x="415" y="144" width="70" height="54" rx="10" fill="#87c5a7" stroke="#247457" stroke-width="3"/>
+              <text x="450" y="176" text-anchor="middle" font-size="15" font-weight="700" fill="#173f33">Деталь</text>
+              <path d="M42 172 H335 L365 172" fill="none" stroke="#d39b4d" stroke-width="10" stroke-linecap="round"/>
+              <path d="M365 172 L394 172" fill="none" stroke="#d39b4d" stroke-width="4" marker-end="url(#arrow)"/>
+              <text x="175" y="156" text-anchor="middle" font-size="14" fill="#705719">Литниковый канал → впуск</text>
+              <path d="M680 228 L680 154" stroke="#557e91" stroke-width="5"/><path d="M730 228 L730 154" stroke="#557e91" stroke-width="5"/>
+              <text x="714" y="253" text-anchor="middle" font-size="14" fill="#365b6d">Выталкиватели</text>
+              <path d="M90 250 C120 220 155 280 190 250 S260 280 295 250" fill="none" stroke="#72a9c0" stroke-width="8" stroke-linecap="round"/>
+              <path d="M602 108 C635 82 668 130 700 104 S765 130 800 104" fill="none" stroke="#72a9c0" stroke-width="8" stroke-linecap="round"/>
+              <text x="447" y="117" text-anchor="middle" font-size="13" fill="#566b65">Полость детали</text>
+              <line x1="450" y1="44" x2="450" y2="303" stroke="#9e6a52" stroke-width="2" stroke-dasharray="7 6"/>
+              <text x="450" y="326" text-anchor="middle" font-size="14" fill="#6d4636">Плоскость разъёма · схема не в масштабе</text>
+              <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#d39b4d"/></marker></defs>
+            </svg>
+            <div class="legend"><span>Деталь и полость</span><span>Путь материала</span><span>Охлаждение</span></div>
+            <div class="diagram-note">Схема помогает запомнить названия, но не является чертежом конструкции. Реальная форма может иметь несколько полостей, боковые механизмы и другие узлы.</div>
+          </div>
+          <div class="grid-2">
+            <div class="tile plastic"><h3>Литьё термопластов</h3><p>В форму поступает расплав полимерной гранулы. Деталь охлаждается в форме и выходит уже твёрдой. Материал, геометрия и режимы влияют на усадку и размеры.</p></div>
+            <div class="tile mim"><h3>MIM: металл в виде смеси</h3><p>В форму поступает смесь металлического порошка со связующим. Вышедшая заготовка ещё не является готовой металлической деталью: далее удаляют связующее и спекают порошок.</p></div>
+          </div>
+          <p class="small muted">Для MIM типовая цепочка включает подготовку смеси (feedstock), формование, удаление связующего и спекание. Конкретный маршрут зависит от сырья и процесса поставщика. <a href="https://www.mimaweb.org/DesignCenter/ProcessOverviewMIM.aspx" target="_blank" rel="noopener">Обзор процесса MIM от Metal Injection Molding Association</a>.</p>
+
+          <div id="terms" class="section-kicker" style="margin-top:28px">Словарь формы</div>
+          <div class="term-grid">
+            <details class="term"><summary>Полость и сердечник</summary><p>Две формообразующие стороны, которые вместе создают внутренние и наружные поверхности детали. Их расположение зависит от геометрии и направления открытия формы.</p></details>
+            <details class="term"><summary>Плоскость разъёма</summary><p>Место, где две половины формы сходятся. На готовой детали может оставаться заметная линия. Важно выяснить, допустима ли она на видимой поверхности.</p></details>
+            <details class="term"><summary>Впуск (литник) и разводящие каналы</summary><p>Впуск — узкое место, через которое материал входит в полость детали. Каналы подводят материал от сопла машины до одного или нескольких впусков.</p></details>
+            <details class="term"><summary>Уклон</summary><p>Небольшой наклон стенки в направлении открытия формы. Он помогает снять деталь и снизить риск царапин и заедания. Нужная величина зависит от поверхности, материала и глубины стенки. <a href="https://help.autodesk.com/cloudhelp/2025/ENU/MoldflowAdviser-CLC-Results/files/Design-Adviser-results/MoldflowAdviser_CLC_Results_Design_Adviser_results_Draft_Angle_result_html.html" target="_blank" rel="noopener">Autodesk: почему нужен уклон</a>.</p></details>
+            <details class="term"><summary>Поднутрение</summary><p>Выступ, паз или отверстие, которое мешает детали выйти прямо при раскрытии формы. Может потребоваться подвижная вставка, ползун или изменение дизайна детали.</p></details>
+            <details class="term"><summary>Выталкиватели</summary><p>Штифты или другие элементы, которые выталкивают деталь из формы. Они могут оставить след, поэтому их расположение согласуют с функциональными и видимыми поверхностями.</p></details>
+            <details class="term"><summary>Охлаждение и вентиляция</summary><p>Каналы отвода тепла влияют на равномерность и длительность охлаждения. Вентиляция выпускает воздух из полости, когда туда входит материал.</p></details>
+            <details class="term"><summary>Число гнёзд</summary><p>Сколько одинаковых деталей форма изготавливает за один цикл. Больше гнёзд может повысить выпуск, но меняет цену формы, требования к машине и баланс заполнения.</p></details>
+            <details class="term"><summary>Холодный и горячий канал</summary><p>В холодном канале материал в каналах обычно затвердевает вместе с деталью; горячий поддерживает материал расплавленным внутри системы. Выбор влияет на цену, отходы, обслуживание и процесс.</p></details>
+            <details class="term"><summary>Усадка</summary><p>Изменение размера материала при охлаждении или последующей обработке. Это не одна универсальная цифра: зависят материал, геометрия и технология. Значение для конкретного проекта подтверждает инженер.</p></details>
+          </div>
+        </section>
+
+        <section class="section" id="brief">
+          <div class="section-kicker">2 · Разбор запроса</div>
+          <h2>Какие сведения нужны до расчёта</h2>
+          <p class="lead">Не оценивайте проект только по картинке или одной 3D-модели. Проверьте, есть ли версия детали, требования к её работе, точный материал и план производства.</p>
+          <div class="grid-2">
+            <div class="tile"><h3>Файлы по детали</h3><ul><li>3D-модель с обозначением версии; например, STEP как нейтральный формат или исходный CAD.</li><li>2D-чертёж с размерами, допусками, единицами измерения, базами и примечаниями.</li><li>Фотографии, образец, схема сборки — если это помогает понять назначение.</li><li>Подтверждение, что модель и чертёж относятся к одной версии.</li></ul></div>
+            <div class="tile"><h3>Что должна делать деталь</h3><ul><li>Где и как её используют; с чем она стыкуется.</li><li>Какие поверхности видны и какие следы допустимы.</li><li>Какие размеры важны для работы или сборки.</li><li>Нагрузка, температура, химическая среда и срок службы — когда применимо.</li></ul></div>
+            <div class="tile"><h3>Как её будут производить</h3><ul><li>Технология: литьё пластмассы или MIM.</li><li>Точная марка/тип материала, поставщик и спецификация; для пластика — цвет и добавки.</li><li>Количество за год и срок выпуска изделия; ожидаемые пики и общий плановый объём.</li><li>Модель или характеристики термопластавтомата, если форма должна работать на конкретной машине.</li></ul></div>
+            <div class="tile"><h3>Качество, поставка, ответственность</h3><ul><li>Какие проверки и документы нужны при приёмке.</li><li>Кто изготовит пробные детали и кто утвердит образцы.</li><li>Куда поставить форму и кто будет её обслуживать.</li><li>Что входит в предложение: проектирование, форма, пробы, образцы, измерения, доставка, запасные части.</li></ul></div>
+          </div>
+          <div class="callout info"><b>Попросите отметить критические размеры.</b> Если клиенту важен каждый размер, уточните причину, допуск и способ измерения. Очень строгий допуск может повлиять на технологию, цену и план контроля. Не обещайте его достижение до проверки.</div>
+          <h3>Быстрая проверка комплекта документов</h3>
+          <ul class="checklist" id="doc-checklist">
+            <li><label><input type="checkbox">Модель и чертёж имеют номер версии</label></li>
+            <li><label><input type="checkbox">Чертёж и модель не противоречат друг другу</label></li>
+            <li><label><input type="checkbox">Указаны материал и нужные характеристики</label></li>
+            <li><label><input type="checkbox">Отмечены критические размеры и поверхности</label></li>
+            <li><label><input type="checkbox">Есть прогноз объёма и срока проекта</label></li>
+            <li><label><input type="checkbox">Известны требования к машине или месту установки</label></li>
+            <li><label><input type="checkbox">Понятно, что входит в поставку и приёмку</label></li>
+            <li><label><input type="checkbox">Для MIM описаны требования к готовой спечённой детали</label></li>
+          </ul>
+        </section>
+
+        <section class="section" id="questions">
+          <div class="section-kicker">3 · Разговор с клиентом</div>
+          <h2>Вопросы, которые помогают прояснить задачу</h2>
+          <p>Необязательно задавать их одним длинным списком в первом письме. Сначала подтвердите главное — назначение, технологию, материал, объём и файлы; затем уточняйте требования по мере разговора.</p>
+          <ol class="question-list">
+            <li><div><p><b>Что это за деталь и в каком изделии она используется?</b></p><div class="why">Помогает понять функции, сборку и возможные последствия дефекта.</div></div></li>
+            <li><div><p><b>Какая версия 3D-модели и чертежа считается актуальной?</b></p><div class="why">Зафиксируйте номер и дату редакции; попросите прислать отсутствующий файл.</div></div></li>
+            <li><div><p><b>Подтверждаем литьё термопласта или MIM?</b></p><div class="why">Эти процессы используют разные материалы и имеют разные шаги после формования.</div></div></li>
+            <li><div><p><b>Какой точный материал и марка должны использоваться?</b></p><div class="why">Названия вроде «нейлон» или «нержавейка» недостаточно точны. Попросите спецификацию или название поставщика и марки.</div></div></li>
+            <li><div><p><b>Какое количество деталей нужно за год и сколько лет планируется выпуск?</b></p><div class="why">Это влияет на число гнёзд, ожидаемый ресурс формы и экономическое обоснование.</div></div></li>
+            <li><div><p><b>Есть ли пиковый объём, целевая скорость или дата начала производства?</b></p><div class="why">Помогает сопоставить планы с возможностями формы и производственной машины.</div></div></li>
+            <li><div><p><b>Какие размеры критичны для работы или сборки?</b></p><div class="why">Попросите допуск, базу измерения и объяснение функции, если это не очевидно.</div></div></li>
+            <li><div><p><b>Какие поверхности будут видны? Допустимы ли следы впуска, разъёма и выталкивателей?</b></p><div class="why">Такие места часто связаны с конструкцией формы; требования к ним лучше знать заранее.</div></div></li>
+            <li><div><p><b>Какую фактуру, полировку, цвет или покрытие ожидают?</b></p><div class="why">Отделка поверхности может менять стоимость, сроки и требования к уклонам детали.</div></div></li>
+            <li><div><p><b>На какой машине будет работать форма?</b></p><div class="why">Нужны модель или характеристики плиты, расстояния между колоннами, усилия смыкания, высоты и интерфейса сопла. Совместимость подтверждает конструктор оснастки.</div></div></li>
+            <li><div><p><b>За что именно отвечает наш поставщик?</b></p><div class="why">Разделите проектирование, производство формы, тестовые циклы, выпуск деталей и измерительный отчёт.</div></div></li>
+            <li><div><p><b>Как клиент будет принимать форму и пробные детали?</b></p><div class="why">Заранее согласуйте образцы, план контроля, критерии одобрения и число включённых корректировок.</div></div></li>
+            <li><div><p><b>Где будет находиться форма и кто отвечает за её обслуживание?</b></p><div class="why">Зафиксируйте владельца, площадку, хранение, ремонт, смазку и запасные детали в договорённостях проекта.</div></div></li>
+            <li><div><p><b>Каковы желаемый срок, бюджетный ориентир и место поставки?</b></p><div class="why">Помогает определить рамки коммерческого предложения. Уточните, включены ли упаковка и перевозка.</div></div></li>
+          </ol>
+          <details class="term"><summary>Дополнительные вопросы для MIM</summary><p>Какой сплав и спецификация готовой детали? Какой feedstock и кто его поставляет? Какие размеры относятся к окончательной детали после спекания? Какие свойства нужно подтвердить: например, прочность, плотность, коррозионная стойкость или магнитные характеристики? Какие зоны можно обработать после спекания? Кто отвечает за оснастку и компенсацию размеров по результатам испытаний?</p></details>
+        </section>
+
+        <section class="section" id="dfm">
+          <div class="section-kicker">4 · Проверка реализуемости</div>
+          <h2>Красные флажки для раннего обсуждения</h2>
+          <p>DFM — это проверка, насколько изделие удобно и надёжно производить выбранным способом. Ваша задача — заметить вопрос и направить его специалисту, а не самостоятельно менять модель.</p>
+          <div class="table-wrap"><table><thead><tr><th>Что заметили</th><th>Почему это может быть важно</th><th>Что спросить или сделать</th></tr></thead><tbody>
+            <tr><td>Нет уклона на высоких стенках</td><td>Деталь может с трудом выходить из формы или царапаться.</td><td>Попросить инженера проверить извлечение; уточнить, можно ли изменить геометрию.</td></tr>
+            <tr><td>Защёлки, боковые отверстия, крючки</td><td>Деталь может быть заперта в форме; нужен движущийся механизм или другое решение.</td><td>Отметить все поднутрения и запросить оценку подвижных узлов.</td></tr>
+            <tr><td>Очень толстые участки рядом с тонкими</td><td>Материал охлаждается неодинаково; возможны утяжины, пустоты, коробление или сложности заполнения.</td><td>Попросить DFM-анализ; уточнить, допустимо ли облегчить/изменить участок. <a href="https://www.protolabs.com/resources/design-tips/improving-part-design-with-uniform-wall-thickness/" target="_blank" rel="noopener">Protolabs: равномерная толщина стенок</a>.</td></tr>
+            <tr><td>Точная размерная цепочка без критических размеров</td><td>Непонятно, какие размеры определяют функцию и как проверять готовую деталь.</td><td>Попросить обозначить важные размеры, базы и метод измерения.</td></tr>
+            <tr><td>Глянцевая поверхность, а место впуска или выталкивателя не согласовано</td><td>Технологический след может оказаться на видимой или рабочей стороне.</td><td>Попросить карту косметических поверхностей и согласовать возможные следы.</td></tr>
+            <tr><td>Материал назван общим словом</td><td>Разные марки могут отличаться свойствами, усадкой, температурой переработки и требованиями к оснастке.</td><td>Запросить точную марку, производителя и требования к цвету/добавкам.</td></tr>
+            <tr><td>В MIM длинные плоские участки, резкие переходы толщин или тонкие элементы</td><td>После удаления связующего и спекания деталь может деформироваться; зелёная заготовка может быть хрупкой.</td><td>Передать модель производителю MIM на DFM с обсуждением ориентации, поддержки и контроля после спекания.</td></tr>
+          </tbody></table></div>
+          <div class="callout"><b>Пример ответа без необоснованного обещания:</b><br>«Мы видим несколько требований, которые могут повлиять на конструкцию и стоимость формы. Перед подтверждением цены попросим инженерную команду проверить расположение разъёма, способ извлечения и критичные размеры. Для проверки нужны актуальная модель, чертёж и марка материала».</div>
+        </section>
+
+        <section class="section" id="cost">
+          <div class="section-kicker">5 · Стоимость и комплект</div>
+          <h2>Из чего складываются цена и срок</h2>
+          <p>Форма — не одна стальная деталь, а сборка узлов. Чем больше специальных движений, требований и проверок, тем больше проектирования, обработки, сборки и отладки.</p>
+          <div class="grid-2">
+            <div class="tile"><h3>На цену формы влияют</h3><ul><li>Размер и сложность детали.</li><li>Число гнёзд и требуемый выпуск.</li><li>Подвижные элементы для поднутрений.</li><li>Горячая или холодная система каналов.</li><li>Сталь, ожидаемый ресурс и ремонтопригодность.</li><li>Точность, полировка, текстура, контроль.</li><li>Пробные циклы, измерения, запасные элементы и доставка.</li></ul></div>
+            <div class="tile"><h3>На срок влияют</h3><ul><li>Скорость согласования DFM и чертежей.</li><li>Сложность обработки и доступность компонентов.</li><li>Сколько циклов исправления/подгонки потребуется.</li><li>Срок поставки материала для формы и проб.</li><li>Планирование машины для испытаний.</li><li>Утверждение образцов и предоставление обратной связи.</li></ul></div>
+          </div>
+          <div class="callout info"><b>Баланс объёма.</b> Больше гнёзд может увеличить выпуск за цикл, но обычно делает форму сложнее и дороже и требует подходящей машины. Выбор числа гнёзд — предмет инженерного и экономического расчёта, а не автоматическое следствие большого годового заказа.</div>
+          <h3>Сверьте объём коммерческого предложения</h3>
+          <ul class="checklist">
+            <li>Проектирование и DFM-анализ включены?</li><li>Какие материалы и компоненты заложены?</li>
+            <li>Указано число гнёзд и тип системы каналов?</li><li>Сколько пробных циклов и образцов включено?</li>
+            <li>Измерение деталей и отчёт входят в цену?</li><li>Какие корректировки входят и что считается изменением детали?</li>
+            <li>Кто оплачивает сырьё для испытаний?</li><li>Включены доставка, монтаж и обучение обслуживанию?</li>
+            <li>Кому принадлежит форма и где она хранится?</li><li>Какой ресурс заявлен и при каких условиях он считается?</li>
+          </ul>
+        </section>
+
+        <section class="section" id="workflow">
+          <div class="section-kicker">6 · Жизненный цикл заказа</div>
+          <h2>От письма клиента до принятой формы</h2>
+          <div class="flow" aria-label="Этапы проекта по форме">
+            <div class="flow-step"><b>Запрос</b><span>Записать требования, получить файлы и уточнить версию.</span></div>
+            <div class="flow-step"><b>Проверка DFM</b><span>Найти риски извлечения, заполнения, внешнего вида и контроля.</span></div>
+            <div class="flow-step"><b>Концепт и расчёт</b><span>Согласовать подход, цену, сроки и объём поставки.</span></div>
+            <div class="flow-step"><b>Конструкция и сборка</b><span>Утвердить чертежи формы и изготовить оснастку.</span></div>
+            <div class="flow-step"><b>Пробы и приёмка</b><span>Получить образцы, проверить их и зафиксировать решение.</span></div>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>Контрольная точка</th><th>Что должно быть зафиксировано</th></tr></thead><tbody>
+            <tr><td>Перед коммерческим предложением</td><td>Технология, файлы и версия, материал, объём, машина, критические размеры и ожидаемый результат.</td></tr>
+            <tr><td>Перед заказом металла</td><td>Утверждённая геометрия детали и концепция оснастки; понятны границы изменений и ответственности.</td></tr>
+            <tr><td>Перед испытаниями</td><td>Какую машину и материал используют; какие дефекты/параметры фиксируют; сколько деталей передают клиенту.</td></tr>
+            <tr><td>Приёмка образцов</td><td>Сравнение с согласованным чертежом, допусками, видом поверхности и спецификацией материала.</td></tr>
+            <tr><td>Перед передачей формы</td><td>Место установки, комплектность, чертежи и схемы, рекомендации по обслуживанию, запасные детали и условия гарантии.</td></tr>
+          </tbody></table></div>
+          <div class="callout alert"><b>Важно:</b> первые пробные детали — не автоматическое доказательство, что изделие принято. Критерии, измерения, отклонения и утверждение клиента нужно документировать. Названия вроде «T0», «T1» и «T2» используются поставщиками по-разному; ориентируйтесь на договорённый план испытаний.</div>
+        </section>
+
+        <section class="section" id="mim">
+          <div class="section-kicker">7 · Отдельный маршрут</div>
+          <h2>MIM: после формы начинается ещё один важный процесс</h2>
+          <p class="lead">MIM расшифровывается как Metal Injection Molding. Металлический порошок смешивают со связующим, чтобы смесь можно было впрыснуть в форму. После извлечения заготовку обрабатывают дальше: удаляют связующее, а затем спекают до металлической детали.</p>
+          <div class="flow" aria-label="Основные этапы MIM">
+            <div class="flow-step"><b>1 · Смесь</b><span>Порошок металла плюс связующее — гранулированное сырьё для впрыска.</span></div>
+            <div class="flow-step"><b>2 · Формование</b><span>Из формы выходит зелёная заготовка, удерживаемая связующим.</span></div>
+            <div class="flow-step"><b>3 · Удаление связующего</b><span>Заготовка теряет большую часть связующего и становится более хрупкой.</span></div>
+            <div class="flow-step"><b>4 · Спекание</b><span>Порошок спекается при нагреве; деталь уплотняется и уменьшается.</span></div>
+            <div class="flow-step"><b>5 · Контроль и отделка</b><span>Проверяют спечённую деталь; при необходимости выполняют обработку.</span></div>
+          </div>
+          <p class="small muted">MIM-ассоциация описывает именно эту последовательность и подчёркивает, что размер зелёной заготовки больше окончательного размера. Реальный коэффициент определяется конкретной смесью и дальнейшим процессом, поэтому его должен подтвердить MIM-поставщик. <a href="https://www.mimaweb.org/DesignCenter/ProcessOverviewMIM.aspx" target="_blank" rel="noopener">Источник: MIMA, Process Overview</a>.</p>
+          <div class="callout alert"><b>Не переносите коэффициент усадки от другого материала или завода.</b> Для MIM форма создаёт геометрию зелёной заготовки, а конечный размер формируется с учётом последующего процесса. Геометрия, состав смеси и режим спекания должны рассматриваться одной командой.</div>
+          <h3>Что обязательно уточнить до проектирования MIM-формы</h3>
+          <div class="grid-2">
+            <div class="tile mim"><h3>Материал и процесс</h3><ul><li>Какой конкретно сплав и спецификация итоговой детали?</li><li>Какой feedstock: марка, поставщик, связующее?</li><li>Кто выполняет формование, удаление связующего и спекание?</li><li>Есть ли ограничения оборудования, машины или печи?</li></ul></div>
+            <div class="tile mim"><h3>Размеры и качество</h3><ul><li>На каком этапе относятся размеры чертежа: после спекания или после финишной обработки?</li><li>Какие размеры и плоскостность критичны?</li><li>Какие свойства готового металла должны быть подтверждены?</li><li>Какие поверхности можно механически обработать?</li></ul></div>
+            <div class="tile mim"><h3>Геометрия и оснастка</h3><ul><li>Как будут ориентировать заготовку при спекании и на чём её поддерживать?</li><li>Есть ли тонкие, длинные или плоские участки?</li><li>Где допустимы следы впуска и выталкивателей?</li><li>Кто отвечает за компенсацию размеров и корректировку формы после испытаний?</li></ul></div>
+            <div class="tile mim"><h3>Граница ответственности</h3><ul><li>Кто утверждает конструкцию формы и стратегию проб?</li><li>Кто оценивает итоговый размер после спекания?</li><li>Кто выполняет последующую мехобработку и контроль?</li><li>Передаются ли форма, настройки и данные процесса между площадками?</li></ul></div>
+          </div>
+          <p>Для пластмасс и MIM некоторые слова одинаковы — впуск, полость, линия разъёма, выталкивание. Но MIM добавляет к ним хрупкую промежуточную заготовку, удаление связующего и спекание. Поэтому MIM-форму нужно согласовывать с производителем, который отвечает за весь процесс или за ключевые последующие этапы. Обзор MIM от <a href="https://www.mpif.org/Events/PowderMet2024/Program2024/EducationalOpportunities/MetalInjectionMoldingTutorial.aspx" target="_blank" rel="noopener">MPIF также включает формование, удаление связующего, спекание и особенности проектирования деталей</a>.</p>
+        </section>
+
+        <section class="section" id="practice">
+          <div class="section-kicker">8 · Практика разговора</div>
+          <h2>Ситуация: клиент хочет цену сегодня</h2>
+          <p>Запрос: «Нужна форма на корпус из ABS, 80 000 штук в год. Поверхность глянцевая, дата нужна через два месяца». Чертёж приложен, но нет 3D-модели, марки ABS, критических размеров и данных о машине.</p>
+          <p><b>Какой следующий шаг самый полезный?</b></p>
+          <div class="scenario-options" id="scenario-options">
+            <button type="button" data-choice="0">Назвать ориентировочную цену и гарантировать срок, чтобы клиент не ушёл.</button>
+            <button type="button" data-choice="1">Уточнить отсутствующие файлы, точную марку материала, критические/видимые зоны, машину и рамки приёмки; затем отправить инженеру.</button>
+            <button type="button" data-choice="2">Самостоятельно назначить восемь гнёзд и горячий канал по годовой потребности.</button>
+          </div>
+          <div class="scenario-feedback" id="scenario-feedback" aria-live="polite"></div>
+          <div class="callout good"><b>Пояснение:</b> без 3D-модели, марки материала и данных о прессе невозможно надёжно утвердить конструкцию, стоимость и срок. Можно дать предварительный статус запроса, но условия должны быть явно предварительными и привязанными к инженерной проверке.</div>
+          <h3>Ещё один случай: «сделайте MIM форму как для пластика»</h3>
+          <p>Ответьте вопросами: какой feedstock и сплав; где измеряется финальный размер; кто отвечает за процесс спекания; какие допуски критичны; где деталь поддерживается в печи; кто согласует пробные спечённые детали. Затем передайте модель профильному инженеру MIM.</p>
+        </section>
+
+        <section class="section" id="quiz">
+          <div class="section-kicker">Проверка знаний</div>
+          <h2>Итоговый тест</h2>
+          <p>Выберите один лучший ответ в каждом вопросе. После отправки появятся балл и пояснения. Ответы также собраны ниже в отдельном ключе.</p>
+          <form id="quiz-form" novalidate>
+            <div id="quiz-questions"></div>
+            <div class="quiz-actions"><button class="btn" type="submit">Проверить ответы</button><button class="btn secondary" type="reset">Начать заново</button><span class="score" id="quiz-score" aria-live="polite"></span></div>
+          </form>
+        </section>
+
+        <section class="section" id="key">
+          <div class="section-kicker">Ключ и повторение</div>
+          <h2>Ответы с пояснениями</h2>
+          <details class="term"><summary>Открыть ключ ответов</summary>
+            <ol class="answer-key" id="answer-key"></ol>
+          </details>
+          <div class="callout good"><b>Если запомнить только пять правил:</b><ol><li>Всегда фиксируйте версию модели и чертежа.</li><li>Уточняйте конкретную марку материала, годовой объём и требования к детали.</li><li>Спрашивайте о критичных размерах, видимых поверхностях и приёмке.</li><li>Проверяйте совместимость формы с машиной и согласуйте объём поставки.</li><li>Для MIM обсуждайте форму, feedstock, удаление связующего и спекание как одну цепочку.</li></ol></div>
+        </section>
+
+        <section class="section" id="sources">
+          <div class="section-kicker">Для дальнейшего чтения</div>
+          <h2>Источники и границы этого учебника</h2>
+          <p>Материал объясняет язык первичного разговора и не заменяет инженерный DFM-анализ, расчёт формы, договорные условия или требования отраслевой квалификации. Конкретные размеры, уклоны, допуски, ресурс и сроки всегда подтверждаются проектной командой для выбранного материала, изделия и оборудования.</p>
+          <ul class="sources">
+            <li><a href="https://www.mimaweb.org/DesignCenter/ProcessOverviewMIM.aspx" target="_blank" rel="noopener">Metal Injection Molding Association — обзор этапов MIM</a>: смесь, формование, удаление связующего и спекание.</li>
+            <li><a href="https://www.mimaweb.org/DesignCenter/WhatisMIM.aspx" target="_blank" rel="noopener">Metal Injection Molding Association — что такое MIM</a>.</li>
+            <li><a href="https://www.mpif.org/Events/PowderMet2024/Program2024/EducationalOpportunities/MetalInjectionMoldingTutorial.aspx" target="_blank" rel="noopener">MPIF — учебный курс по MIM</a>: инструменты, feedstock, формование, удаление связующего, спекание и проектирование деталей.</li>
+            <li><a href="https://help.autodesk.com/cloudhelp/2025/ENU/MoldflowAdviser-CLC-Results/files/Design-Adviser-results/MoldflowAdviser_CLC_Results_Design_Adviser_results_Draft_Angle_result_html.html" target="_blank" rel="noopener">Autodesk Moldflow — уклон и извлечение детали</a>.</li>
+            <li><a href="https://www.protolabs.com/en-gb/resources/design-for-mouldability-toolkit/" target="_blank" rel="noopener">Protolabs — справочник по проектированию для литья</a>: толщина стенок, уклоны, впуск и выталкивание.</li>
+            <li><a href="https://www.protolabs.com/resources/design-tips/improving-part-design-with-uniform-wall-thickness/" target="_blank" rel="noopener">Protolabs — равномерная толщина стенок</a>: возможные эффекты слишком толстых/тонких участков и DFM-проверка.</li>
+            <li><a href="https://www.protolabs.com/resources/design-tips/planning-for-parting-lines-in-injection-molding/" target="_blank" rel="noopener">Protolabs — планирование линии разъёма</a>: влияние разъёма на направление открытия и вид детали.</li>
+          </ul>
+          <a class="toplink" href="#top">↑ Вернуться к началу</a>
+        </section>
+        <footer class="foot">Учебник подготовлен для начального знакомства с процессом. Для каждого проекта фиксируйте исходные данные и привлекайте инженера до обещаний по конструкции, цене, сроку и достижимым размерам.</footer>
+      </main>
+    </div>
+  </div>
+  <script>
+    (function(){
+      const questions=[
+        {q:"Какова главная задача поставщика при первом разговоре с клиентом?",a:["Самостоятельно назначить конструкцию пресс-формы","Собрать требования и выявить пробелы, чтобы инженер мог оценить проект","Сразу обещать цену и дату"],c:1,e:"Коммерческий специалист собирает точные входные данные и передаёт их инженеру."},
+        {q:"Что нужно зафиксировать о CAD-файлах?",a:["Только имя файла","Версию модели и соответствующую ей версию чертежа","Цвет значка программы, в которой его открыли"],c:1,e:"Все участники должны понимать, какую редакцию детали используют для расчёта и изготовления."},
+        {q:"Зачем выяснять точную марку пластика?",a:["Разные марки могут вести себя по-разному при формовании и влиять на требования к форме","Это нужно только для цвета","Марка не влияет на проект формы"],c:0,e:"Свойства материала и добавки влияют на переработку, размеры и другие требования."},
+        {q:"Что делает уклон на стенке детали?",a:["Помогает детали выйти из формы","Увеличивает число гнёзд","Заменяет систему охлаждения"],c:0,e:"Уклон облегчает извлечение; необходимая величина зависит от конкретного случая."},
+        {q:"Что может означать поднутрение?",a:["Деталь можно снять только прямым раскрытием","Геометрия мешает прямому извлечению и может потребовать движущегося узла или изменения детали","Это название марки стали"],c:1,e:"Поднутрение запирает часть геометрии при прямом ходе открытия формы."},
+        {q:"Клиент требует очень малый допуск «на все размеры». Что делать?",a:["Пообещать выполнение до изучения детали","Уточнить критичные размеры, допуски и измерение, затем провести инженерную оценку","Сразу заменить материал на другой"],c:1,e:"Сначала надо понять функцию размеров и проверить достижимость на конкретном процессе."},
+        {q:"Какой набор входных данных лучше запросить для оценки формы?",a:["Актуальная 3D-модель, чертёж, точная марка материала и ожидаемый объём","Только фотография","Только адрес склада"],c:0,e:"Эти данные помогают оценить геометрию, размеры, материал и производственную потребность."},
+        {q:"Клиент просит форму для конкретного термопластавтомата. Что спросить?",a:["Модель/параметры пресса и интерфейсы, затем подтвердить совместимость с конструктором","Только цвет машины","Ничего: все формы одинаково подходят"],c:0,e:"Габариты и подключение формы должны соответствовать конкретной машине."},
+        {q:"Если заказ на сотни тысяч деталей в год, нужно ли автоматически назначить много гнёзд?",a:["Да, сразу выбрать максимум","Нет; число гнёзд рассчитывают с учётом спроса, цикла, машины, цены и надёжности","Нет, всегда надо делать одно гнездо"],c:1,e:"Высокий спрос важен, но решение требует инженерного и экономического баланса."},
+        {q:"Чем отличаются впуск и линия разъёма?",a:["Впуск — место входа материала; линия разъёма — место встречи половин формы","Это два названия одного и того же узла","Впуск — выталкиватель; линия разъёма — охлаждение"],c:0,e:"Оба могут оставлять следы, но выполняют разные функции."},
+        {q:"Какой правильный базовый маршрут MIM?",a:["Металлический расплав → литьё в песок","Feedstock → формование зелёной заготовки → удаление связующего → спекание","Пластмассовая гранула → охлаждение → готовый металл"],c:1,e:"MIM использует порошок и связующее; после формования заготовку обрабатывают и спекают."},
+        {q:"Можно ли применить один универсальный коэффициент усадки для всех MIM-форм?",a:["Да, для любого сплава и завода","Нет; его определяют для выбранного feedstock, геометрии и конкретного процесса","Да, если модель сохранена в STEP"],c:1,e:"Размерное изменение зависит от состава и термического маршрута; его должен подтвердить MIM-производитель."},
+        {q:"Что важно для видимой глянцевой стороны?",a:["Согласовать зоны впуска, разъёма, выталкивателей и допустимые следы","Не обсуждать внешний вид до поставки","Разместить все следы на самом заметном месте"],c:0,e:"Заранее согласованные косметические зоны помогают подобрать расположение технологических элементов."},
+        {q:"Когда считать форму принятой?",a:["Сразу после первого цикла","Когда выполнены заранее согласованные проверки и заказчик зафиксировал приёмку","Когда форма покрашена"],c:1,e:"Приёмка должна опираться на согласованные критерии и документированные результаты."},
+        {q:"Что обязательно согласовать в коммерческом предложении?",a:["Только цену стали","Состав поставки, пробы, измерения, правки, доставку, ответственность и условия приёмки","Только название проекта"],c:1,e:"Явная граница объёма работ уменьшает риск разных ожиданий сторон."},
+        {q:"Кто принимает решение о конструкции формы при сложном поднутрении?",a:["Коммерческий специалист без проверки","Инженер-конструктор с учётом требований клиента и процесса","Поставщик материала без чертежа"],c:1,e:"Ваша роль — заметить риск, собрать ограничения и передать его инженеру."}
+      ];
+      const quizBox=document.getElementById('quiz-questions');
+      const keyBox=document.getElementById('answer-key');
+      questions.forEach(function(item,i){
+        const field=document.createElement('fieldset'); field.className='quiz-item';
+        const legend=document.createElement('legend'); legend.textContent=(i+1)+'. '+item.q; field.appendChild(legend);
+        item.a.forEach(function(answer,j){
+          const label=document.createElement('label'); label.className='quiz-option';
+          const input=document.createElement('input'); input.type='radio'; input.name='q'+i; input.value=String(j);
+          const text=document.createElement('span'); text.textContent=answer;
+          label.appendChild(input); label.appendChild(text); field.appendChild(label);
+        });
+        const feedback=document.createElement('div'); feedback.className='feedback'; feedback.id='feedback-'+i; feedback.setAttribute('aria-live','polite'); field.appendChild(feedback); quizBox.appendChild(field);
+        const key=document.createElement('li'); key.textContent=(i+1)+'. '+String.fromCharCode(65+item.c)+' — '+item.a[item.c]+'. '+item.e; keyBox.appendChild(key);
+      });
+      const form=document.getElementById('quiz-form');
+      form.addEventListener('submit',function(event){
+        event.preventDefault(); let score=0; let unanswered=0;
+        questions.forEach(function(item,i){
+          const chosen=form.querySelector('input[name="q'+i+'"]:checked'); const box=document.getElementById('feedback-'+i);
+          box.className='feedback';
+          if(!chosen){unanswered++;box.classList.add('incorrect');box.textContent='Ответ не выбран. Верный вариант: '+item.a[item.c]+'. '+item.e;return;}
+          const good=Number(chosen.value)===item.c;if(good)score++;
+          box.classList.add(good?'correct':'incorrect');box.textContent=(good?'Верно. ':'Не совсем. Верный вариант: '+item.a[item.c]+'. ')+item.e;
+        });
+        document.getElementById('quiz-score').textContent='Результат: '+score+' из '+questions.length+(unanswered?' · без ответа: '+unanswered:'')+'.';
+      });
+      form.addEventListener('reset',function(){setTimeout(function(){document.querySelectorAll('.feedback').forEach(function(box){box.className='feedback';box.textContent='';});document.getElementById('quiz-score').textContent='';},0);});
+      document.getElementById('scenario-options').addEventListener('click',function(event){
+        const button=event.target.closest('button[data-choice]');if(!button)return;
+        const output=document.getElementById('scenario-feedback');
+        if(button.dataset.choice==='1'){output.innerHTML='<div class="callout good"><b>Хороший выбор.</b> Вы собираете недостающие данные и подключаете инженера до обещания результата.</div>';}
+        else{output.innerHTML='<div class="callout alert"><b>Рискованный выбор.</b> Цена, конструкция, число гнёзд и срок зависят от отсутствующих данных. Уточните условия и обозначьте расчёт как предварительный до проверки.</div>';}
+      });
+      const checks=document.querySelectorAll('#doc-checklist input');
+      try{checks.forEach(function(box,i){box.checked=localStorage.getItem('mold-check-'+i)==='1';box.addEventListener('change',function(){localStorage.setItem('mold-check-'+i,box.checked?'1':'0');});});}catch(e){}
+      function updateProgress(){const doc=document.documentElement;const max=doc.scrollHeight-window.innerHeight;const value=max>0?Math.round(window.scrollY/max*100):100;document.getElementById('reading-progress').style.width=value+'%';document.getElementById('progress-label').textContent=value+'%';}
+      window.addEventListener('scroll',updateProgress,{passive:true});window.addEventListener('resize',updateProgress);updateProgress();
+    })();
+  </script>
+</body>
+</html>
